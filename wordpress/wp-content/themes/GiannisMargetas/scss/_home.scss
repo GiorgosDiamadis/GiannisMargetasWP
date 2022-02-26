@@ -1,0 +1,143 @@
+@import "config";
+
+.carousel-img {
+  width: 100%;
+  //position: absolute;
+  display: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+  width: 100%;
+  height: 100vh;
+
+}
+
+.header-content {
+  position: absolute;
+  text-align: center;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  p {
+    font-family: $source-serif;
+    font-size: 1.3em;
+    margin-top: 10px;
+    color: white;
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+
+  button:first-of-type {
+    margin-right: 1rem;
+  }
+
+
+}
+
+.diakiriksi {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: black;
+
+
+  max-width: 100%;
+  padding-inline: 2rem;
+  max-height: max-content;
+  font-family: $source-serif !important;
+  line-height: 1.6;
+  font-size: 1.4em;
+
+  .usterografo {
+    margin-top: 2rem;
+
+    p {
+      font-weight: bold;
+      font-family: $source-serif;
+    }
+  }
+
+}
+
+.landing-recent-posts {
+  width: 100%;
+  z-index: 4;
+  max-width: fit-content;
+  margin-inline: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+.carousel {
+  width: 100%;
+  position: relative;
+}
+
+.carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  opacity: 0.8;
+  //z-index: -1
+}
+
+.onoma-dimarxou {
+  font-family: $source-sans;
+  font-weight: bold;
+  font-size: 2em;
+  letter-spacing: 0.45em
+}
+
+.onoma-kinimatos {
+  font-family: $source-serif;
+  color: $mainColor;
+  text-transform: uppercase;
+  font-size: 5em
+}
+
+.onoma-dimou {
+  font-family: $source-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 3em
+}
+
+.arthro {
+  color: black;
+}
+

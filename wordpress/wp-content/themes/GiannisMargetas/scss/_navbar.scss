@@ -1,0 +1,91 @@
+@import "config";
+
+.navbar {
+  padding: 1rem 0;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  background-color: transparent;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+
+  .logo{
+    margin-left: 2rem;
+  }
+}
+
+.navbar p {
+  margin-top:1rem;
+  font-size: 2em;
+  display: inline-block
+}
+
+.navbar .nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  margin-top: 1em;
+  margin-inline: 2rem;
+}
+li {
+  list-style: none;
+  margin-left: 0.6em;
+  margin-right: 0.6em;
+  font-size: 1.3em
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease
+}
+.hamburger {
+  display: none;
+  position: absolute;
+  right: 1rem;
+  top: 2.5rem;
+  width: 30px;
+  height: 2px;
+  background-color: $mainColor;
+  transition: all .3s ease;
+
+  &:after, &:before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: $mainColor;
+    transition: all .3s ease;
+  }
+
+  &:after {
+    top: -10px;
+  }
+
+  &:before {
+    top: 10px;
+  }
+}
+.nav-item a:hover {
+  cursor: pointer;
+  color: $mainColor
+}
+
+.nav-btn{
+  background-color: $mainColor;
+  padding: .4rem 2rem;
+  border-radius: 20px;
+  a {
+    color: black;
+  }
+
+  a:hover{
+    color: black;
+  }
+}
