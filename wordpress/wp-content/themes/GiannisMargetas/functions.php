@@ -14,8 +14,22 @@ function registerCSS()
 
 function registerJS()
 {
-    wp_enqueue_script('_js', get_template_directory_uri() . "/main.js", array(), "", 'all', true);
     wp_enqueue_script("_jq", "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js", "", 'all', true);
+    if (is_page()) {
+        global $wp_query;
+
+        $template_name = get_post_meta($wp_query->post->ID, '_wp_page_template', true);
+        if ($template_name == 'index.php') {
+
+        }
+    }
+    wp_enqueue_script('_js', get_template_directory_uri() . "/main.js", array(), "", 'all');
+
+}
+
+function registerMasonry(){
+    wp_enqueue_script("_masonry", "https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js", "", 'all', true);
+
 }
 
 function registerThemeSupport()
@@ -26,7 +40,8 @@ function registerThemeSupport()
 }
 
 add_action('after_setup_theme', 'registerThemeSupport');
-add_action('wp_enqueue_scripts', 'registerJS');
+add_action('wp_enqueue_scripts', 'registerJS',11);
+add_action('wp_enqueue_scripts','registerMasonry',10);
 add_action('wp_enqueue_scripts', "registerCSS");
 
 require_once __DIR__ . "/Classes/Post.php";

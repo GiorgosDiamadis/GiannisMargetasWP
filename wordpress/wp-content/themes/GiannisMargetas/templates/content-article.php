@@ -1,4 +1,4 @@
-<div class="post">
+<div class="post grid-item">
     <?php
     $title = get_the_title();
     $id = get_the_ID();

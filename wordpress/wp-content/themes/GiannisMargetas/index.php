@@ -7,7 +7,7 @@ get_header();
         <h1 class="section-header">Δημοσιεύσεις</h1>
 
     </div>
-    <div class="posts">
+    <div class="posts grid" id="gridd">
 
         <?php
         if (have_posts()) {

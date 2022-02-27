@@ -111,9 +111,44 @@ contactForm();
 socialToggle();
 
 const hamburger = document.querySelector(".hamburger")
-console.log(hamburger)
-hamburger.addEventListener("click",()=>{
+hamburger.addEventListener("click", () => {
     const navMenu = document.querySelector(".nav-menu");
-    console.log(navMenu)
     navMenu.classList.toggle("flex");
 })
+
+
+var container = document.querySelector("#gridd")
+
+if (container) {
+    var masnryConfig = {}
+
+    if (window.screen.width > 1000) {
+        masnryConfig = {
+            itemSelector: ".grid-item",
+            // percentPosition:true,
+            columnWidth: 360,
+            isFitWidth: true,
+            gutter: 60
+        }
+    } else if (window.screen.width > 534 && window.screen.width < 1000) {
+        masnryConfig = {
+            itemSelector: ".grid-item",
+
+            columnWidth: 500,
+            isFitWidth: true,
+            gutter: 10
+        }
+    } else {
+        masnryConfig = {
+            itemSelector: ".grid-item",
+            columnWidth: 300,
+            isFitWidth: true,
+            gutter: 10
+        }
+    }
+
+
+    var msnry = new Masonry(container, masnryConfig)
+
+
+}

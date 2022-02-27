@@ -800,11 +800,18 @@ section {
   position: relative;
 }
 
+.grid-item {
+  float: left;
+  margin-top: 50px;
+  width: 360px;
+  height: max-content;
+}
+
 .posts {
   display: grid;
   grid-template-columns: repeat(auto-fit, 369px);
   grid-template-rows: auto;
-  margin: 5rem 2rem;
+  margin: auto;
   justify-items: center;
   gap: 20px;
 }
