@@ -16,7 +16,7 @@
 .header-content {
   position: absolute;
   text-align: center;
-  top: 15%;
+  top: 50vh;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -42,6 +42,9 @@
   margin-top: 1rem;
   margin-bottom: 2rem;
   color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 
   max-width: 100%;
@@ -50,6 +53,11 @@
   font-family: $source-serif !important;
   line-height: 1.6;
   font-size: 1.4em;
+
+  p{
+    text-align: justify;
+    width: 50%;
+  }
 
   .usterografo {
     margin-top: 2rem;
@@ -75,30 +83,7 @@
 
 
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
 }
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .4
-  }
-  to {
-    opacity: 1
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: .4
-  }
-  to {
-    opacity: 1
-  }
-}
-
 .carousel {
   width: 100%;
   position: relative;
@@ -111,7 +96,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, .6);
   opacity: 0.8;
   //z-index: -1
 }
@@ -125,7 +110,7 @@
 
 .onoma-kinimatos {
   font-family: $source-serif;
-  color: $mainColor;
+  color: white;
   text-transform: uppercase;
   font-size: 5em
 }

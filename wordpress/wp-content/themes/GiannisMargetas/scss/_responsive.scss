@@ -17,6 +17,12 @@
       margin: 1rem 0;
     }
   }
+
+  .diakiriksi{
+    p{
+      width: 75%;
+    }
+  }
 }
 
 @media screen and(max-width: 1000px){
@@ -40,7 +46,11 @@
 }
 @media screen and(max-width: 600px) {
 
-
+  .diakiriksi{
+    p{
+      width: 95%;
+    }
+  }
   .carousel{
     //height: 70%;
 
