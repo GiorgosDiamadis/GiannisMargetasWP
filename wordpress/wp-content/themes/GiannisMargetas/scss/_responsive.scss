@@ -18,6 +18,11 @@
     }
   }
 
+  .posts{
+    grid-template-columns: repeat(auto-fit, minmax(369px,1fr)) !important;
+
+  }
+
   .diakiriksi{
     p{
       width: 75%;
