@@ -6,7 +6,10 @@ $carouselImgs = array();
 
 foreach ($carouselIds as $carouselId) {
     $url = wp_get_attachment_url($carouselId);
-    array_push($carouselImgs, $url);
+    $caption = wp_get_attachment_caption($carouselId);
+
+    array_push($carouselImgs, array('img' => $url, 'caption' => $caption));
+//    var_dump($carouselImgs[0]['img']);
 }
 ?>
 
@@ -16,7 +19,12 @@ foreach ($carouselIds as $carouselId) {
         $i = 0;
         foreach ($carouselImgs as $carouselImg) {
             $current = $i == 0 ? '' : 'fade';
-            echo "<img src='$carouselImg' class='carousel-img $current'/>";
+            $img = $carouselImg["img"];
+            $caption = $carouselImg["caption"];
+            echo "<div class='carousel-img $current'>
+                       <img src='$img'/>
+                       <p class='caption'>$caption</p>
+                  </div> ";
             $i++;
         }
         ?>

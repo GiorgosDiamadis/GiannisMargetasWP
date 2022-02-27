@@ -37,7 +37,7 @@
                 <a href="<?php get_site_url() ?>/arthra">Δημοσιεύσεις</a>
             </li>
             <li class="nav-item">
-                <a href="<?php get_site_url() ?>/biografiko">Βιογραφικό</a>
+                <a href="<?php get_site_url() ?>/biografiko">Ποιος Είμαι</a>
             </li>
             <li class="nav-item">
                 <a href="<?php get_site_url() ?>/epikoinwnia">Επικοινωνία</a>
