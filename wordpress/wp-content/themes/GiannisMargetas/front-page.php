@@ -34,7 +34,7 @@ foreach ($carouselIds as $carouselId) {
         <h1 class="onoma-kinimatos">Γιαννης Μαργετας</h1>
         <p>Υποψήφιος Δήμαρχος Ερμιονίδας</p>
         <button class="btn-primary"><a href="/biografiko">Ποιος Είμαι</a></button>
-        <button class="btn-secondary"><a href="/artha">Δημοσιεύσεις</a></button>
+        <button class="btn-secondary"><a href="/arthra">Δημοσιεύσεις</a></button>
 
     </div>
 
