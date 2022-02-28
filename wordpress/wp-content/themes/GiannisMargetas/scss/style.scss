@@ -1,13 +1,14 @@
-@import "config", "navbar", "home", "footer", "posts","responsive";
+@import "config", "navbar", "home", "footer", "posts", "responsive";
 
 * {
   font-family: $source-serif;
   margin: 0;
   padding: 0;
 }
-.content,.diakiriksi{
-  p,div{
-    margin: 10px 0 ;
+
+.content, .diakiriksi {
+  p, div {
+    margin: 10px 0;
   }
 }
 
@@ -80,6 +81,7 @@ a {
   display: block;
   width: max-content;
   margin: auto;
+  margin-bottom: 1rem;
 
   &::after {
     content: "";
@@ -157,9 +159,11 @@ label {
   text-align: center;
   cursor: pointer;
 }
+
 .flex {
-  display: flex!important;
+  display: flex !important;
 }
+
 input, textarea {
   font-family: $source-serif;
   margin: 1rem 0;
@@ -322,9 +326,10 @@ input, textarea {
   flex-direction: column;
   //align-items: center;
 
-  p{
+  p {
     text-align: justify;
   }
+
   li {
     list-style: unset;
     font-size: unset;
@@ -337,7 +342,7 @@ section {
   position: relative;
 }
 
-.grid-item{
+.grid-item {
   float: left;
   margin-top: 50px;
   width: 400px;
@@ -346,6 +351,7 @@ section {
 
 .posts {
 
+  justify-content: center;
   display: grid;
   grid-template-columns: repeat(auto-fit, 369px);
   grid-template-rows: auto;
@@ -505,7 +511,6 @@ section {
   transform: scale(1.1);
   cursor: pointer
 }
-
 
 
 .social-icon {
