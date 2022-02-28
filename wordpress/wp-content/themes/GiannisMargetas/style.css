@@ -436,6 +436,10 @@ p {
   }
 }
 @media screen and (max-width: 600px) {
+  .grid-item {
+    width: 300px !important;
+  }
+
   .diakiriksi p {
     width: 95%;
   }

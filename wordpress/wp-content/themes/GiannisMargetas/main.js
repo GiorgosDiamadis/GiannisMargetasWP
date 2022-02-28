@@ -134,7 +134,7 @@ if (container) {
         masnryConfig = {
             itemSelector: ".grid-item",
 
-            columnWidth: 500,
+            columnWidth: 400,
             isFitWidth: true,
             gutter: 10
         }
