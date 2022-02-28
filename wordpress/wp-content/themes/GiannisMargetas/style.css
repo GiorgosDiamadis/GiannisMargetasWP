@@ -555,7 +555,7 @@ a {
   display: block;
   width: max-content;
   margin: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 .section-header::after {
   content: "";
