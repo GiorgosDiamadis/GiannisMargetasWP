@@ -126,7 +126,7 @@ if (container) {
         masnryConfig = {
             itemSelector: ".grid-item",
             // percentPosition:true,
-            columnWidth: 360,
+            columnWidth: 400,
             isFitWidth: true,
             gutter: 60
         }
