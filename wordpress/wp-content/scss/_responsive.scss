@@ -1,0 +1,110 @@
+@import "config";
+@media screen and(max-width: 1220px) {
+  .hamburger{
+    display: block;
+  }
+  .nav-menu{
+    display: none!important;
+    width: 100%!important;
+    height: 100vh!important;
+    position: absolute!important;
+    top: 0!important;
+    flex-direction: column!important;
+    margin: 0!important;
+    background-color: black!important;
+
+    .nav-item{
+      margin: 1rem 0;
+    }
+  }
+
+  .posts{
+    grid-template-columns: repeat(auto-fit, minmax(369px,1fr)) !important;
+
+  }
+
+  .diakiriksi{
+    p{
+      width: 75%;
+    }
+  }
+}
+
+@media screen and(max-width: 1000px){
+
+  .depth-2{
+    margin-left: 0;
+  }
+  .content{
+    padding-inline: 5rem;
+  }
+  .header{
+    padding-inline: 0;
+  }
+  input, textarea{
+    width: 95% !important;
+  }
+  input[type=checkbox]{
+    width: unset!important;
+  }
+
+}
+@media screen and(max-width: 600px) {
+
+  .grid-item{
+    width: 300px!important;
+  }
+  .diakiriksi{
+    p{
+      width: 95%;
+    }
+  }
+
+  .section-header{
+    font-size: 2rem!important;
+  }
+  .carousel{
+    //height: 70%;
+
+    .carousel-img{
+      //height: 70%;
+    }
+  }
+
+  .header{
+    padding-inline: 0;
+  }
+
+  input, textarea{
+    width: 88% !important;
+  }
+  input[type=checkbox]{
+    width: unset!important;
+  }
+
+  .depth-2{
+    margin-left: 0;
+  }
+  .content{
+    padding-inline: 1rem;
+  }
+  .logo{
+    font-size: 1rem!important;
+  }
+  .social{
+    bottom: 1rem!important;
+    right: 1rem!important;
+  }
+
+  .header-content{
+    top: 18rem;
+    width: 100%;
+    p {
+      font-size: 1em;
+    }
+
+    .onoma-kinimatos{
+      font-size: 2em;
+    }
+  }
+}

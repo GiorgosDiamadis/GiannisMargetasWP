@@ -1,0 +1,71 @@
+@import "config";
+
+.footer-ul{
+  list-style: none;
+}
+.footer-ul li .onoma-kinimatos {
+  font-family: "Source Serif Pro", serif;
+  text-transform: uppercase;
+  color: #fff;
+  display: block;
+  margin-top: 1em;
+  font-weight: 500;
+  font-size: 1.3em
+}
+.footer-container {
+  padding: 1rem;
+  margin-top: 1em;
+  min-height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: black !important
+}
+
+.footer-ul {
+  text-align: center;
+  height: 100%;
+  padding-top: 2em;
+  padding-bottom: 5em
+}
+.footer-ul h1 {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.footer-ul > li {
+  margin-top: 1em;
+  margin-bottom: 1em
+}
+
+.copyright {
+  background-color: black !important;
+  padding: 2rem;
+  color:white;
+}
+
+.footer-ul > li a {
+  color: white;
+  font-size: .8em
+}
+
+.footer-ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  p{
+    //max-width: 250px;
+  }
+}
+
+.footer-ul li a:hover {
+  color: $mainColor;
+  cursor: pointer
+}

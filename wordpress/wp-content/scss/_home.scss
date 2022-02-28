@@ -1,0 +1,146 @@
+@import "config";
+
+.carousel-img {
+  width: 100%;
+  //position: absolute;
+  position: relative;
+  display: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+  height: 100vh;
+
+  .caption{
+    position: absolute;
+    font-family: $source-serif;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 10;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  img{
+    max-width: unset!important;
+    width: 100% !important;
+    height: 100vh!important;
+
+  }
+
+}
+
+.header-content {
+  position: absolute;
+  text-align: center;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  p {
+    font-family: $source-serif;
+    font-size: 1.3em;
+    margin-top: 10px;
+    color: white;
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+
+  button:first-of-type {
+    margin-right: 1rem;
+  }
+
+
+}
+
+.diakiriksi {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  max-width: 100%;
+  padding-inline: 2rem;
+  max-height: max-content;
+  font-family: $source-serif !important;
+  line-height: 1.6;
+  font-size: 1.4em;
+
+  p{
+    text-align: justify;
+    width: 50%;
+  }
+
+  .usterografo {
+    margin-top: 2rem;
+
+    p {
+      font-weight: bold;
+      font-family: $source-serif;
+    }
+  }
+
+}
+
+.landing-recent-posts {
+  width: 100%;
+  z-index: 4;
+  max-width: fit-content;
+  margin-inline: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+.fade {
+}
+.carousel {
+  width: 100%;
+  position: relative;
+}
+
+.carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .3);
+  opacity: 0.8;
+  //z-index: -1
+}
+
+.onoma-dimarxou {
+  font-family: $source-sans;
+  font-weight: bold;
+  font-size: 2em;
+  letter-spacing: 0.45em
+}
+
+.onoma-kinimatos {
+  font-family: $source-serif;
+  color: white;
+  text-transform: uppercase;
+  font-size: 5em
+}
+
+.onoma-dimou {
+  font-family: $source-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 3em
+}
+
+.arthro {
+  color: black;
+}
+
