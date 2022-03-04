@@ -720,6 +720,7 @@ input, textarea {
   color: black;
   display: block;
   margin: auto;
+  margin-top: 3rem;
   border-radius: 224px;
   font-size: 1.1em;
   -webkit-transition: all 0.5s ease;
@@ -727,6 +728,10 @@ input, textarea {
 }
 .btn a {
   color: unset;
+}
+
+.form-submit {
+  text-align: center !important;
 }
 
 .btn:hover {
