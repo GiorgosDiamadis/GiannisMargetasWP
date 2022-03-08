@@ -2,7 +2,6 @@
 get_header();
 $id = get_the_ID();
 $title = get_the_title();
-$img = wp_get_attachment_image_url(get_post_thumbnail_id($id), 'large');
 ?>
 
 
@@ -17,7 +16,7 @@ $img = wp_get_attachment_image_url(get_post_thumbnail_id($id), 'large');
     </div>
 
     <div class="content">
-        <img class="post-img" src="<?php echo $img ?>" alt="">
+<!--        <img class="post-img" src="--><?php //echo $img ?><!--" alt="">-->
         <?php the_content(); ?>
         <?php comments_template(); ?>
     </div>

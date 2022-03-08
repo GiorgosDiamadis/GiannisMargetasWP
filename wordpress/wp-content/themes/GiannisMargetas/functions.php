@@ -14,7 +14,7 @@ function registerCSS()
 
 function registerJS()
 {
-    wp_enqueue_script("_jq", "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js", "", 'all', true);
+    wp_enqueue_script("_jq", "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js", "", 'all', false);
     if (is_page()) {
         global $wp_query;
 
@@ -24,6 +24,7 @@ function registerJS()
         }
     }
     wp_enqueue_script('_js', get_template_directory_uri() . "/main.js", array(), "", 'all');
+    wp_enqueue_script("_jq-masonry", get_template_directory_uri() . "/masonry.pkgd.min.js", array(), 'all', false);
 
 }
 
