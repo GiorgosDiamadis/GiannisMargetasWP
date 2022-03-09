@@ -1,5 +1,7 @@
 <div class="post grid-item">
     <?php
+    $category = get_the_category()[0]->slug;
+
     $title = get_the_title();
     $id = get_the_ID();
     $excerpt = get_the_excerpt($id);
@@ -7,6 +9,12 @@
     $permalink = get_permalink($id);
     ?>
     <a href='<?php echo $permalink ?>'>
+        <?php
+        $date = get_post_meta($id,"date")[0];
+        if ($category=="xronomixani"){
+            echo "<div class='badge-time'><i class='fa-solid fa-calendar-days'></i>$date</div>";
+        }
+        ?>
 
         <img src='<?php echo $img ?>' alt='' class='post-thumbnail'>
         <p class='post-title'><?php echo $title ?></p>

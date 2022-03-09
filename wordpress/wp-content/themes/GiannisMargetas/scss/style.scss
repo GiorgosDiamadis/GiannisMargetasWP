@@ -260,6 +260,24 @@ input, textarea {
     color: unset;
   }
 }
+.badge-time{
+  position: absolute;
+  background-color: #86e8f8;
+  width: 100%;
+  color: black;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  height: 30px;
+  font-size: 1.1rem;
+  /* padding: 0.3rem; */
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  i{
+    margin-right: 1rem;
+  }
+}
 
 .form-submit{
   text-align: center!important;

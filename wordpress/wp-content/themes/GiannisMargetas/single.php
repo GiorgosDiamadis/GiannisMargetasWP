@@ -8,7 +8,7 @@ $title = get_the_title();
 <section class="container">
     <div class="header">
         <h1 class="article-title"><?php echo get_the_title() ?></h1>
-        <span class="date important"><?php echo get_the_date() ?></span>
+        <span class="date important">Δημοσιεύτηκε <?php echo get_the_date() ?></span>
         <br>
         <br>
         <a href="#comments"><span class="important comments"><?php comments_number() ?></span></a>
