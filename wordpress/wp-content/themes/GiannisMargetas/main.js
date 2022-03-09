@@ -116,44 +116,64 @@ hamburger.addEventListener("click", () => {
     navMenu.classList.toggle("flex");
 })
 
-
 $(document).ready(function () {
-    // $.getScript("https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js", function () {
-    var container = document.querySelector("#gridd")
+    // Images loaded is zero because we're going to process a new set of images.
+    var imagesLoaded = 0;
+    // Total images is still the total number of <img> elements on the page.
+    var totalImages = $("img").length;
 
-    if (container) {
-        var masnryConfig = {}
+    // Step through each image in the DOM, clone it, attach an onload event
+    // listener, then set its source to the source of the original image. When
+    // that new image has loaded, fire the imageLoaded() callback.
+    $("img").each(function (idx, img) {
+        $("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"));
+    });
 
-        if (window.screen.width > 1000) {
-            masnryConfig = {
-                itemSelector: ".grid-item",
-                // percentPosition:true,
-                columnWidth: 400,
-                isFitWidth: true,
-                gutter: 60
-            }
-        } else if (window.screen.width > 534 && window.screen.width < 1000) {
-            masnryConfig = {
-                itemSelector: ".grid-item",
-
-                columnWidth: 400,
-                isFitWidth: true,
-                gutter: 10
-            }
-        } else {
-            masnryConfig = {
-                itemSelector: ".grid-item",
-                columnWidth: 300,
-                isFitWidth: true,
-                gutter: 10
-            }
+    // Do exactly as we had before -- increment the loaded count and if all are
+    // loaded, call the allImagesLoaded() function.
+    function imageLoaded() {
+        imagesLoaded++;
+        if (imagesLoaded == totalImages) {
+            allImagesLoaded();
         }
-
-
-        var msnry = new Masonry(container, masnryConfig)
-
-
     }
 
-    // })
-})
+    function allImagesLoaded() {
+        console.log("ALL IMAGES LOADED");
+        var container = document.querySelector("#gridd")
+
+        if (container) {
+            var masnryConfig = {}
+
+            if (window.screen.width > 1000) {
+                masnryConfig = {
+                    itemSelector: ".grid-item",
+                    // percentPosition:true,
+                    columnWidth: 400,
+                    isFitWidth: true,
+                    gutter: 60
+                }
+            } else if (window.screen.width > 534 && window.screen.width < 1000) {
+                masnryConfig = {
+                    itemSelector: ".grid-item",
+
+                    columnWidth: 400,
+                    isFitWidth: true,
+                    gutter: 10
+                }
+            } else {
+                masnryConfig = {
+                    itemSelector: ".grid-item",
+                    columnWidth: 300,
+                    isFitWidth: true,
+                    gutter: 10
+                }
+            }
+
+
+            var msnry = new Masonry(container, masnryConfig)
+
+
+        }
+    }
+});
