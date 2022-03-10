@@ -55,10 +55,14 @@ foreach ($carouselIds as $carouselId) {
             $excerpt = get_the_excerpt($id);
             $img = wp_get_attachment_image_url(get_post_thumbnail_id($id), 'medium');
             $permalink = get_permalink($id);
+            $imgElement = '';
+            if ($img != null) {
+                $imgElement = "<img src='$img' alt='' class='post-thumbnail'>";
+            }
             echo "<div class='post grid-item'>
                     <a href='$permalink'>
 
-                        <img src='$img' alt='' class='post-thumbnail'>
+                        $imgElement
                         <p class='post-title' >$title</p>
                         
                         <div class='post-excerpt'>$excerpt</div>
