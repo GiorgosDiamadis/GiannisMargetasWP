@@ -10,13 +10,17 @@
     ?>
     <a href='<?php echo $permalink ?>'>
         <?php
-        $date = get_post_meta($id,"date")[0];
-        if ($category=="xronomixani"){
+        $date = get_post_meta($id, "date")[0];
+        if ($category == "xronomixani") {
             echo "<div class='badge-time'><i class='fa-solid fa-calendar-days'></i>$date</div>";
+        }
+
+        if ($img != null) {
+            echo "<img src='$img' alt='' class='post-thumbnail'>";
         }
         ?>
 
-        <img src='<?php echo $img ?>' alt='' class='post-thumbnail'>
+
         <p class='post-title'><?php echo $title ?></p>
 
         <div class='post-excerpt'><?php echo $excerpt ?></div>
