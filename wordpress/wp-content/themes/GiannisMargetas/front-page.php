@@ -52,16 +52,27 @@ foreach ($carouselIds as $carouselId) {
         foreach ($posts as $post) {
             $title = $post->post_title;
             $id = $post->ID;
+            $category = get_the_category($id)[0]->slug;
+
             $excerpt = get_the_excerpt($id);
             $img = wp_get_attachment_image_url(get_post_thumbnail_id($id), 'medium');
             $permalink = get_permalink($id);
             $imgElement = '';
+
             if ($img != null) {
                 $imgElement = "<img src='$img' alt='' class='post-thumbnail'>";
             }
+
+            $date = get_post_meta($id, "date")[0];
+            $badge = "";
+
+            if ($category == "xronomixani") {
+                $badge = "<div class='badge-time'>Χρονομηχανή <i class='fa-solid fa-calendar-days'></i>$date</div>";
+            }
+
             echo "<div class='post grid-item'>
                     <a href='$permalink'>
-
+                        $badge
                         $imgElement
                         <p class='post-title' >$title</p>
                         

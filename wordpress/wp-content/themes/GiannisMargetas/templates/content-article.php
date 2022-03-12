@@ -12,7 +12,7 @@
         <?php
         $date = get_post_meta($id, "date")[0];
         if ($category == "xronomixani") {
-            echo "<div class='badge-time'><i class='fa-solid fa-calendar-days'></i>$date</div>";
+            echo "<div class='badge-time'>Χρονομηχανή<i class='fa-solid fa-calendar-days'></i>$date</div>";
         }
 
         if ($img != null) {

@@ -739,6 +739,7 @@ input, textarea {
   text-align: center;
   height: 30px;
   font-size: 1.1rem;
+  font-weight: bold;
   /* padding: 0.3rem; */
   top: 0;
   display: flex;
@@ -746,6 +747,7 @@ input, textarea {
   justify-content: center;
 }
 .badge-time i {
+  margin-left: 1rem;
   margin-right: 1rem;
 }
 
