@@ -45,3 +45,14 @@ add_action('wp_enqueue_scripts','registerMasonry',10);
 add_action('wp_enqueue_scripts', "registerCSS");
 
 require_once __DIR__ . "/Classes/Post.php";
+
+function meta_description()
+{
+    global $post;
+    $id = $post->ID;
+    $metaDesc = get_post_meta($id, "metadescription")[0];
+
+    echo "<meta name='description' content='$metaDesc' />";
+}
+
+add_action('wp_head', 'meta_description');
