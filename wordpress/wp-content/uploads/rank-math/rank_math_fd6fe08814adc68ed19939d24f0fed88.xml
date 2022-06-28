@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//giannismargetas.com/main-sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://giannismargetas.com/arthra/</loc>
+		<lastmod>2022-02-28T02:23:31+02:00</lastmod>
+	</url>
+	<url>
+		<loc>https://giannismargetas.com/</loc>
+		<lastmod>2022-03-08T15:53:34+02:00</lastmod>
+	</url>
+	<url>
+		<loc>https://giannismargetas.com/epikoinwnia/</loc>
+		<lastmod>2022-02-28T02:25:25+02:00</lastmod>
+	</url>
+	<url>
+		<loc>https://giannismargetas.com/privacy-policy/</loc>
+		<lastmod>2022-02-28T02:25:00+02:00</lastmod>
+	</url>
+	<url>
+		<loc>https://giannismargetas.com/biografiko/</loc>
+		<lastmod>2022-02-28T02:23:57+02:00</lastmod>
+		<image:image>
+			<image:loc>https://giannismargetas.com/wp-content/uploads/2022/02/273644854_288395186657487_2877876424601396847_n.jpg</image:loc>
+		</image:image>
+	</url>
+</urlset>

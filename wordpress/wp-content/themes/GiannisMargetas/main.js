@@ -128,11 +128,16 @@ $(document).ready(function () {
     $("img").each(function (idx, img) {
         $("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"));
     });
+	
+	if(totalImages === 0){
+			allImagesLoaded();
+	}
 
     // Do exactly as we had before -- increment the loaded count and if all are
     // loaded, call the allImagesLoaded() function.
     function imageLoaded() {
         imagesLoaded++;
+		
         if (imagesLoaded == totalImages) {
             allImagesLoaded();
         }
